@@ -1,0 +1,120 @@
+body {
+    background-image: url('pl.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 80px 20px;
+    color: #fff;
+    position: relative;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+}
+h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    z-index: 1;
+    position: relative;
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+}
+
+/* ===== BOUTONS ===== */
+a.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px auto;
+    padding: 14px 0;
+    width: 280px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 35px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+a.social-btn i {
+    font-size: 18px;
+}
+
+#fb { 
+    background-color: #1877f2; 
+}
+#fb:hover {
+     background-color: #145dbf; 
+    }
+
+#wht {
+     background-color: #25D366; 
+    }
+#wht:hover { 
+    background-color: #1DA851;
+ }
+
+#ig { 
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCAF45);
+    background-size: 200% 200%;
+    animation: gradientBG 3s ease infinite;
+}
+#ig:hover { 
+    filter: brightness(1.1);
+ }
+
+#tt { 
+    background-color: #FF005C; 
+}
+#tt:hover { 
+    background-color: #e6004f; 
+}
+
+#x { 
+    background-color: #1DA1F2;
+ }
+#x:hover { background-color: #0d95e8;
+ }
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+img.profile {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+img.profile:hover {
+    transform: scale(1.05);
+}
